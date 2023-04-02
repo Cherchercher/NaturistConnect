@@ -9,14 +9,14 @@ import LoggedInUserContext from '../context/logged-in-user';
 export default function Dashboard({ user: loggedInUser }) {
   const { user, setActiveUser } = useUser(loggedInUser.uid);
   useEffect(() => {
-    document.title = 'Instagram';
+    document.title = 'NaturistConnect';
   }, []);
 
   return (
     <LoggedInUserContext.Provider value={{ user, setActiveUser }}>
-      <div className="bg-gray-background">
+      <div className='bg-gray-background'>
         <Header />
-        <div className="grid grid-cols-3 gap-4 justify-between mx-auto max-w-screen-lg">
+        <div className='grid grid-cols-3 gap-4 justify-between mx-auto max-w-screen-lg'>
           <Timeline />
           <Sidebar />
         </div>
